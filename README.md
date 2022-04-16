@@ -22,11 +22,19 @@ Here they are: <br>
 > createHeading(html, number) // same thing as above, just a heading
 > createButton(html, onclick) // same thing as above, just pass in a function to the onclick argument
 > createImage(src) // creates an image with the link
+> createDiv(className) // creates a div with the class specified
 > createStyle(style) // creates and appends style
 > append(element) // appends an element to the div with the "app" class, you might wanna wrap creation functions in this
 > appendBody(element) // appends the element to the body div found in index.html, should be avoided
 > appendMultiple(array) // appends all items in the array to the body
 > specialAppend(element, parent) // appends the element you provide, to a custom parent (body, head, div that you pass in, etc)
+> setLocalStorage(name, data) // sets (or makes) a localstorage address (json is supported)
+> getLocalStorage(name) // returns the value of the key (name) as a string (or object if you put in a json object)
+> removeLocalStorage(name) // removes the key and value from localstorage
 > switchPage(page) // changes the page
 > new PTS(tag) // discover it for yourself
 ```
+
+#### Example
+
+(Todo Example)[https://gist.github.com/koneko/eacbd35fbfeff4327bff05c9bfd22e2a]
