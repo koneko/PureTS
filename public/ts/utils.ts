@@ -24,25 +24,19 @@ function getDoc() {
     return doc;
 }
 function createText(text) {
-    let doc = getDoc()
     let p = document.createElement("p")
     p.innerHTML = text
-    doc.appendChild(p)
     return p
 }
 function createButton(text, onclick) {
-    let doc = getDoc()
     let btn = document.createElement("button")
     btn.innerHTML = text
     btn.onclick = onclick
-    doc.appendChild(btn)
     return btn
 }
 function createHeading(text, number) {
-    let doc = getDoc()
     let h = document.createElement("h" + number.toString())
     h.innerHTML = text
-    doc.appendChild(h)
     return h
 }
 function switchPage(page) {
@@ -53,13 +47,31 @@ function switchPage(page) {
 function setTitle(title) {
     document.title = title
 }
+function setBackground(color) {
+    document.body.style.backgroundColor = color
+}
+function createImage(src) {
+    let img = document.createElement("img")
+    img.src = src
+    return img
+}
 function createStyle(style) {
     let styleElement = document.createElement("style")
     styleElement.innerHTML = style
     document.head.appendChild(styleElement)
     return styleElement
 }
-
+function append(element) {
+    document.body.appendChild(element)
+}
+function specialAppend(element, parent) {
+    parent.appendChild(element)
+}
+function appendMultiple(array) {
+    array.forEach(e => {
+        document.body.appendChild(e)
+    })
+}
 class PTS {
     public element: any = null;
     constructor(tag) {
@@ -73,6 +85,9 @@ class PTS {
     getInnerHtml() {
         return this.element.innerHTML
     }
+    getElement() {
+        return this.element
+    }
     addAttribute(name, value) {
         this.element.setAttribute(name, value)
     }
@@ -84,6 +99,9 @@ class PTS {
     }
     setProperty(name, value) {
         this.element[name] = value
+    }
+    appendChild(child) {
+        this.element.appendChild(child)
     }
 }
 
