@@ -77,6 +77,27 @@ function appendMultiple(array) {
 function appendBody(element) {
     document.body.appendChild(element)
 }
+function createDiv(className) {
+    let div = document.createElement("div")
+    div.className = className
+    return div
+}
+function setLocalStorage(name, data) {
+    if(data == null) data = ""
+    //check if data is a json object
+    if(typeof data == "object") data = JSON.stringify(data)
+    localStorage.setItem(name, data)
+}
+function getLocalStorage(name) {
+    let data = localStorage.getItem(name)
+    if(data == null) return null
+    //check if data is a json object
+    if(data.startsWith("{") || data.startsWith("[")) return JSON.parse(data)
+    return data
+}
+function removeLocalStorage(name) {
+    localStorage.removeItem(name)
+}
 class PTS {
     public element: any = null;
     constructor(tag, autoAppend) {
