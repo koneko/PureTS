@@ -62,7 +62,9 @@ function createStyle(style) {
     return styleElement
 }
 function append(element) {
-    document.body.appendChild(element)
+    let app = document.querySelector(".app")
+    if(!app) app = document.body.appendChild(document.createElement("div"))
+    app.appendChild(element)
 }
 function specialAppend(element, parent) {
     parent.appendChild(element)
@@ -71,6 +73,9 @@ function appendMultiple(array) {
     array.forEach(e => {
         document.body.appendChild(e)
     })
+}
+function appendBody(element) {
+    document.body.appendChild(element)
 }
 class PTS {
     public element: any = null;

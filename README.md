@@ -23,7 +23,8 @@ Here they are: <br>
 > createButton(html, onclick) // same thing as above, just pass in a function to the onclick argument
 > createImage(src) // creates an image with the link
 > createStyle(style) // creates and appends style
-> append(element) // appends an element to the document body, you might wanna wrap creation functions in this
+> append(element) // appends an element to the div with the "app" class, you might wanna wrap creation functions in this
+> appendBody(element) // appends the element to the body div found in index.html, should be avoided
 > appendMultiple(array) // appends all items in the array to the body
 > specialAppend(element, parent) // appends the element you provide, to a custom parent (body, head, div that you pass in, etc)
 > switchPage(page) // changes the page
