@@ -24,6 +24,10 @@ Here they are: <br>
 > createImage(src) // creates an image with the link
 > createDiv(className) // creates a div with the class specified
 > createStyle(style) // creates and appends style
+> createFavicon(src) // creates favicon
+> getElementById(id) // self explanitory
+> getElementByClass(class) // same thing
+> getElementsByTag(tag) // same thing
 > append(element) // appends an element to the div with the "app" class, you might wanna wrap creation functions in this
 > appendBody(element) // appends the element to the body div found in index.html, should be avoided
 > appendMultiple(array) // appends all items in the array to the body
@@ -31,6 +35,8 @@ Here they are: <br>
 > setLocalStorage(name, data) // sets (or makes) a localstorage address (json is supported)
 > getLocalStorage(name) // returns the value of the key (name) as a string (or object if you put in a json object)
 > removeLocalStorage(name) // removes the key and value from localstorage
+> setTitle(title) // sets the title
+> setBackground(color) // sets the background color
 > switchPage(page) // changes the page
 > new PTS(tag) // discover it for yourself
 ```

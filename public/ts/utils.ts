@@ -50,6 +50,12 @@ function setTitle(title) {
 function setBackground(color) {
     document.body.style.backgroundColor = color
 }
+function createFavicon(src) {
+    let link = document.createElement("link")
+    link.rel = "icon"
+    link.href = src
+    document.head.appendChild(link)
+}
 function createImage(src) {
     let img = document.createElement("img")
     img.src = src
@@ -97,6 +103,15 @@ function getLocalStorage(name) {
 }
 function removeLocalStorage(name) {
     localStorage.removeItem(name)
+}
+function getElementById(id) {
+    return document.getElementById(id)
+}
+function getElementByClass(className) {
+    return document.querySelector("." + className)
+}
+function getElementsByTag(tag) {
+    return document.getElementsByTagName(tag)
 }
 class PTS {
     public element: any = null;
