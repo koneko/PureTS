@@ -74,10 +74,12 @@ function appendMultiple(array) {
 }
 class PTS {
     public element: any = null;
-    constructor(tag) {
+    constructor(tag, autoAppend) {
+        if(!autoAppend) autoAppend = true
         let doc = getDoc()
         this.element = document.createElement(tag)
-        doc.appendChild(this.element)
+        if(autoAppend == true) doc.appendChild(this.element)
+        else return this.element
     }
     setInnerHtml(html) {
         this.element.innerHTML = html
@@ -102,6 +104,9 @@ class PTS {
     }
     appendChild(child) {
         this.element.appendChild(child)
+    }
+    appendTo(parent) {
+        parent.appendChild(this.element)
     }
 }
 
