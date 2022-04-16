@@ -16,6 +16,7 @@ Its kinda an experiment, feel free to make your own additions.
 You can use normal JS functions, but if you are new to using only JS or TS when making a site. <br>
 Here they are: <br>
 
+```js
 > getDoc() // returns the div where the main app rests
 > createText(html) // returns an element that you feed into an append function
 > createHeading(html, number) // same thing as above, just a heading
@@ -27,3 +28,4 @@ Here they are: <br>
 > specialAppend(element, parent) // appends the element you provide, to a custom parent (body, head, div that you pass in, etc)
 > switchPage(page) // changes the page
 > new PTS(tag) // discover it for yourself
+```
