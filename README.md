@@ -43,4 +43,4 @@ Here they are: <br>
 
 #### Example
 
-(Todo Example)[https://gist.github.com/koneko/eacbd35fbfeff4327bff05c9bfd22e2a]
+[Todo Example](https://gist.github.com/koneko/eacbd35fbfeff4327bff05c9bfd22e2a)
